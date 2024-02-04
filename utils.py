@@ -45,3 +45,18 @@ class BinaryTree:
     def print_tree(self):
         print(self.__str__())
 
+
+# Example on how to create a binary tree
+# A has two children: B and C
+# B has two children: D and E
+# C has two children: F and G
+# Construct the binary tree:
+def construct_binary_tree():
+    root = BinaryTree("A")
+    root.insert_left("B")
+    root.insert_right("C")
+    root.left.insert_left("D")
+    root.left.insert_right("E")
+    root.right.insert_left("F")
+    root.right.insert_right("G")
+    return root
