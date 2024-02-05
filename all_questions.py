@@ -5,21 +5,7 @@ import utils as u
 
 
 # Example of how to specify a binary with the structure:
-#
-#         Root
-#         /  \
-#        /    \
-#       A      B
-#      / \    / \
-#     C   D  E   F
-#
-root = u.BinaryTree("Root")
-A = root.insert_left("Root rule left")
-B = root.insert_right("Root root right")
-C = A.insert_left("A rule left")
-D = A.insert_right("B rule right")
-E = B.insert_left("B rule left")
-
+# See the file INSTRUCTIONS.md
 # ----------------------------------------------------------------------
 
 
@@ -46,7 +32,7 @@ def question1():
     level1["radon"] = 0.
     level1["radon_info_gain"] = 0.
 
-    level1["weight_loss"] = 0.0.
+    level1["weight_loss"] = 0.0
     level1["weight_loss_info_gain"] = 0.
 
     level2_left["smoking"] = 0.
@@ -57,7 +43,7 @@ def question1():
     level2_left["radon"] = 0.
     level2_left["radon_info_gain"] = 0.
 
-    level2_left["cough"] 0.
+    level2_left["cough"] = 0.
     level2_left["cough_info_gain"] = 0.
 
     level2_left["weight_loss"] = 0.
@@ -272,10 +258,14 @@ def question7():
 # ----------------------------------------------------------------------
 
 if __name__ == "__main__":
-    question1()
-    question2()
-    question3()
-    question4()
-    question5()
-    question6()
-    question7()
+    answers = {}
+    answers["q1"] = question1()
+    answers["q2"] = question2()
+    answers["q3"] = question3()
+    answers["q4"] = question4()
+    answers["q5"] = question5()
+    answers["q6"] = question6()
+    answers["q7"] = question7()
+
+    u.save_dict("answers.pkl", answers)
+

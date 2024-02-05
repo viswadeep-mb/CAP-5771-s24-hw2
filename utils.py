@@ -1,8 +1,21 @@
 import math
+import pickle
 
 
 def log2(x):
     return math.log(x, 2)
+
+def save_dict(filenm, dct):
+    with open(filenm, "wb") as file:
+        pickle.dump(dct, file)
+
+
+# Loading from a pickle file
+def load_dict(filenm, dct):
+    with open(filenm, "rb") as file:
+        loaded_data = pickle.load(file)
+        return loaded_data
+    raise "load_dict:: Error loading data"
 
 
 class BinaryTree:
