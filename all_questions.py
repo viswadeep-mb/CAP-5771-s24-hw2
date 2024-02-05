@@ -105,8 +105,6 @@ def question2():
     # Use the Binary Tree structure to construct the tree
     # Answer is an instance of BinaryTree
     tree = u.BinaryTree("Root")
-
-    # Fill up the tree
     answer["(d) full decision tree"] = tree
 
     return answer
@@ -130,7 +128,7 @@ def question3():
     answer["(f) attr for splitting"] = ""
 
     # Explanatory text string
-    answer["(g) explain choice"] = ""
+    answer["(f) explain choice"] = ""
 
     return answer
 
