@@ -88,35 +88,35 @@ def question2():
 
     # Answers are floats
     '''
-    Area_A=0.41
-    Area_B=0.46
-    Area_C=0.13
-    ent_total=-(Area_A*u.log2(Area_A) + Area_B*u.log2(Area_B)+ Area_C*u.log2(Area_C) )
+    #Area_A=0.41
+    #Area_B=0.46
+    #Area_C=0.13
+    #ent_total=-(Area_A*u.log2(Area_A) + Area_B*u.log2(Area_B)+ Area_C*u.log2(Area_C) )
     '''
     answer["(a) entropy_entire_data"] = 1.425
     
     # Infogain
     '''
-    Area_A=0
-    Area_B=0.16
-    Area_C=0.04
-    ent_x_2=-(Area_A*u.log2(Area_A) + Area_B*u.log2(Area_B)+ Area_C*u.log2(Area_C) )
+    #Area_A=0
+    #Area_B=0.16
+    #Area_C=0.04
+    #ent_x_2=-(Area_A*u.log2(Area_A) + Area_B*u.log2(Area_B)+ Area_C*u.log2(Area_C) )
     '''
     answer["(b) x <= 0.2"] = 0.608
 
     '''
-    Area_A=0.20
-    Area_B=0.46
-    Area_C=0.04
-    ent_x_7=-(Area_A*u.log2(Area_A) + Area_B*u.log2(Area_B)+ Area_C*u.log2(Area_C) )
+    #Area_A=0.20
+    #Area_B=0.46
+    #Area_C=0.04
+    #ent_x_7=-(Area_A*u.log2(Area_A) + Area_B*u.log2(Area_B)+ Area_C*u.log2(Area_C) )
     '''
     answer["(b) x <= 0.7"] = 1.165
 
     '''
-    Area_A=0.09
-    Area_B=0.42
-    Area_C=0.09
-    ent_y_6=-(Area_A*u.log2(Area_A) + Area_B*u.log2(Area_B)+ Area_C*u.log2(Area_C) )
+    #Area_A=0.09
+    #Area_B=0.42
+    #Area_C=0.09
+    #ent_y_6=-(Area_A*u.log2(Area_A) + Area_B*u.log2(Area_B)+ Area_C*u.log2(Area_C) )
     '''
     answer["(b) y <= 0.6"] = 1.150
 
