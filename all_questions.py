@@ -203,7 +203,7 @@ def question5():
     explain["c similarity explain"] = "Both techniques aims to reduce overfitting by penalizing models for complexity."
 
     explain["c difference"] = "Specificity"
-    explain["c difference explain"] = "MDL aims for a model that requires fewer bits to describe,whereas pessimistic error aims to adjust tree error to avoid complex decision tree.
+    explain["c difference explain"] = "MDL aims for a model that requires fewer bits to describe,whereas pessimistic error aims to adjust tree error to avoid complex decision tree."
 
     return explain
 
