@@ -66,10 +66,10 @@ def question1():
     tree=u.BinaryTree("smoking")
     A=tree.insert_left("cough")
     B=tree.insert_right("radon")
-    A.insert_left("yes")
-    A.insert_right("no")
-    B.insert_left("yes")
-    B.insert_right("no")
+    A.insert_left("Yes")
+    A.insert_right("No")
+    B.insert_left("Yes")
+    B.insert_right("No")
     answer["tree"] = tree  
     answer["training_error"] = 0.0  
     return answer
