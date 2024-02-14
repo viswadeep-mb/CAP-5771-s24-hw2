@@ -23,40 +23,40 @@ def question1():
     level2_left = {}
     level2_right = {}
 
-    level1["smoking"] = 1.
+    level1["smoking"] = 1.0
     level1["smoking_info_gain"] = 0.2781
 
-    level1["cough"] = -1.
+    level1["cough"] = -1.0
     level1["cough_info_gain"] = 0.2365
 
-    level1["radon"] = -1.
+    level1["radon"] = -1.0
     level1["radon_info_gain"] = 0.0350
 
-    level1["weight_loss"] = -1.
+    level1["weight_loss"] = -1.0
     level1["weight_loss_info_gain"] = 0.0291
 
-    level2_left["smoking"] = -1.
-    level2_left["smoking_info_gain"] = 0.
-    level2_right["smoking"] = -1.
-    level2_right["smoking_info_gain"] = 0.
+    level2_left["smoking"] = -1.0
+    level2_left["smoking_info_gain"] = 0.0
+    level2_right["smoking"] = -1.0
+    level2_right["smoking_info_gain"] = 0.0
 
-    level2_left["radon"] = -1.
+    level2_left["radon"] = -1.0
     level2_left["radon_info_gain"] = 0.0729
 
-    level2_left["cough"] = 1.
+    level2_left["cough"] = 1.0
     level2_left["cough_info_gain"] = 0.7219
 
-    level2_left["weight_loss"] = -1.
+    level2_left["weight_loss"] = -1.0
     level2_left["weight_loss_info_gain"] = 0.1711
 
     
-    level2_right["radon"] = 1.
+    level2_right["radon"] = 1.0
     level2_right["radon_info_gain"] = 0.7219
 
-    level2_right["cough"] = -1.
+    level2_right["cough"] = -1.0
     level2_right["cough_info_gain"] = 0.3219
 
-    level2_right["weight_loss"] = -1.
+    level2_right["weight_loss"] = -1.0
     level2_right["weight_loss_info_gain"] = 0.1711
 
     answer["level1"] = level1
@@ -72,8 +72,7 @@ def question1():
     tree.right.insert_left("yes")
     tree.right.insert_right("no")
     answer["tree"] = tree  
-
-    
+ 
     # answer["training_error"] = num_of_misclassifications/total_records = 0/10=0
     
     answer["training_error"] = 0.0  
@@ -97,7 +96,7 @@ def question2():
 
     # choose one of 'x=0.2', 'x=0.7', or 'x=0.6'
     #Entropy of x<=0.2 is less compared to other splits
-    answer["(c) attribute"] = "x<=0.2"  
+    answer["(c) attribute"] = "x=0.2"  
 
     # Use the Binary Tree structure to construct the tree
     # Answer is an instance of BinaryTree
