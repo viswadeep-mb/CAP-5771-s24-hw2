@@ -65,12 +65,12 @@ def question1():
 
 
     tree=u.BinaryTree("smoking")
-    tree.insert_left("cough")
-    tree.insert_right("radon")
-    tree.left.insert_left("yes")
-    tree.left.insert_right("no")
-    tree.right.insert_left("yes")
-    tree.right.insert_right("no")
+    A=tree.insert_left("cough")
+    B=tree.insert_right("radon")
+    A.insert_left("yes")
+    A.insert_right("no")
+    B.insert_left("yes")
+    B.insert_right("no")
     answer["tree"] = tree  
  
     # answer["training_error"] = num_of_misclassifications/total_records = 0/10=0
