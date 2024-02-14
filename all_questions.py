@@ -63,7 +63,6 @@ def question1():
     answer["level2_left"] = level2_left
     answer["level2_right"] = level2_right
 
-
     tree=u.BinaryTree("smoking")
     A=tree.insert_left("cough")
     B=tree.insert_right("radon")
@@ -72,9 +71,6 @@ def question1():
     B.insert_left("yes")
     B.insert_right("no")
     answer["tree"] = tree  
- 
-    # answer["training_error"] = num_of_misclassifications/total_records = 0/10=0
-    
     answer["training_error"] = 0.0  
     return answer
 
@@ -91,16 +87,14 @@ def question2():
     # Infogain
     answer["(b) x <= 0.2"] = 0.608
     answer["(b) x <= 0.7"] = 1.165
-
     answer["(b) y <= 0.6"] = 1.150
 
     # choose one of 'x=0.2', 'x=0.7', or 'x=0.6'
-    #Entropy of x<=0.2 is less compared to other splits
     answer["(c) attribute"] = "x=0.2"  
 
     # Use the Binary Tree structure to construct the tree
     # Answer is an instance of BinaryTree
-    tree = u.BinaryTree("Root")
+    tree = u.BinaryTree("x=0.2")
     answer["(d) full decision tree"] = tree
 
     return answer
@@ -278,4 +272,3 @@ if __name__ == "__main__":
     answers["q7"] = question7()
 
     u.save_dict("answers.pkl", answers)
-    #print(u.load_dict("answers.pkl",answers))
