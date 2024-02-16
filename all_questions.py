@@ -24,16 +24,16 @@ def question1():
     level2_right = {}
 
     level1["smoking"] = 1.0
-    level1["smoking_info_gain"] = 0.2781
+    level1["smoking_info_gain"] = 0.2780
 
     level1["cough"] = -1.0
-    level1["cough_info_gain"] = 0.2365
+    level1["cough_info_gain"] = 0.0348
 
     level1["radon"] = -1.0
-    level1["radon_info_gain"] = 0.0350
+    level1["radon_info_gain"] = 0.2364
 
     level1["weight_loss"] = -1.0
-    level1["weight_loss_info_gain"] = 0.0291
+    level1["weight_loss_info_gain"] = 0.0290
 
     level2_left["smoking"] = -1.0
     level2_left["smoking_info_gain"] = 0.0
@@ -85,16 +85,29 @@ def question2():
     answer["(a) entropy_entire_data"] = 1.425
     
     # Infogain
-    answer["(b) x < 0.2"] = 0.608
-    answer["(b) x < 0.7"] = 1.165
-    answer["(b) y < 0.6"] = 1.150
+    answer["(b) x < 0.2"] = 0.177
+    answer["(b) x < 0.7"] = 0.355
+    answer["(b) y < 0.6"] = 0.347
 
     # choose one of 'x=0.2', 'x=0.7', or 'x=0.6'
-    answer["(c) attribute"] = "x=0.7"  
+    answer["(c) attribute"] = "x<0.7"  
 
     # Use the Binary Tree structure to construct the tree
     # Answer is an instance of BinaryTree
-    tree = u.BinaryTree("x")
+    tree = u.BinaryTree("x<0.7")
+    A=tree.insert_left("y<0.6")
+    A.insert_left("B")
+    C=A.insert_right("x<0.2")
+    D=C.insert_left("y<0.8")
+    C.insert_right("A")
+    D.insert_left("C")
+    D.insert_right("B")
+    B=tree.insert_right("y<0.6")
+    E=B.insert_left("y<0.3")
+    B.insert_right("A")
+    E.insert_left("A")
+    E.insert_right("C")
+    
     answer["(d) full decision tree"] = tree
 
     return answer
