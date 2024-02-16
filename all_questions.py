@@ -47,7 +47,7 @@ def question1():
     level2_left["cough_info_gain"] = 0.7219
 
     level2_left["weight_loss"] = -1.0
-    level2_left["weight_loss_info_gain"] = 0.1711
+    level2_left["weight_loss_info_gain"] = 0.1709
 
     
     level2_right["radon"] = 1.0
@@ -57,7 +57,7 @@ def question1():
     level2_right["cough_info_gain"] = 0.3219
 
     level2_right["weight_loss"] = -1.0
-    level2_right["weight_loss_info_gain"] = 0.1711
+    level2_right["weight_loss_info_gain"] = 0.1709
 
     answer["level1"] = level1
     answer["level2_left"] = level2_left
@@ -213,10 +213,10 @@ def question5():
     explain["b explain"] = "Though accuracy drops slightly Model 2 is still preferable due to better generalization observed earlier and it is less likely to overfit."
 
     explain["c similarity"] = "Regularization"
-    explain["c similarity explain"] = "Both techniques aims to reduce overfitting by penalizing models for complexity."
+    explain["c similarity explain"] = "Both approaches aim to mitigate overfitting by imposing penalties on models for their complexity."
 
     explain["c difference"] = "Specificity"
-    explain["c difference explain"] = "MDL aims for a model that requires fewer bits to describe,whereas pessimistic error aims to adjust tree error to avoid complex decision tree."
+    explain["c difference explain"] = "MDL strives for a model that necessitates a reduced number of bits for its description, while pessimistic error seeks to modify tree error in order to steer clear of intricate decision trees."
 
     return explain
 
