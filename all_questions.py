@@ -125,7 +125,7 @@ def question3():
     # float
     answer["(b) Gini, ID"] = 0.0
     answer["(c) Gini, Gender"] = 0.48
-    answer["(d) Gini, Car type"] = 0.1622
+    answer["(d) Gini, Car type"] = 0.1625
     answer["(e) Gini, Shirt type"] = 0.4914
 
     answer["(f) attr for splitting"] = "Car type"
@@ -230,20 +230,24 @@ def question6():
     # value of the form "z <= float" where "z" is "x" or "y"
     #  and "float" is a floating point number (notice: <=)
     # The value could also be "A" or "B" if it is a leaf
-    answer["a, level 1"] = ""
-    answer["a, level 2, right"] =""
-    answer["a, level 2, left"] = ""
-    answer["a, level 3, left"] = ""
-    answer["a, level 3, right"] = ""
+    answer["a, level 1"] = "x<=0.5"
+    answer["a, level 2, right"] ="A"
+    answer["a, level 2, left"] = "y<=0.4"
+    answer["a, level 3, left"] = "A"
+    answer["a, level 3, right"] = "B"
 
     # run each datum through the tree. Count the number of errors and divide by number of samples. .
     # Since we have areas: calculate the area that is misclassified (total area is unity)
     # float between 0 and 1
-    answer["b, expected error"] = 0.
+    answer["b, expected error"] = 0.06
 
     # Use u.BinaryTree to define the tree. Create your tree.
     # Replace "root node" by the proper node of the form "z <= float"
-    tree = u.BinaryTree("root note")
+    tree = u.BinaryTree("x<=0.5")
+    tree.insert_right("A")
+    L=tree.insert_left("y<=0.4")
+    L.insert_left("A")
+    L.insert_right("B")
 
     answer["c, tree"] = tree
 
